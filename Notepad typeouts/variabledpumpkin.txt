@@ -1,0 +1,42 @@
+float phmx,phmty,pletx,plrey,plre23y,ple2x,ple3x,prex,pre2x,pre3x,prtx;
+
+void setup(){ 
+  size(640,360);
+  
+  phmx=320;
+  phmty=100;
+  pletx=260;
+  plrey=40;
+  plre23y=80;
+  ple2x=240;
+  ple3x=280;
+  prex=380;
+  pre2x=360;
+  pre3x=400;
+  prtx=340;  
+
+}
+
+  void draw(){
+    
+  background(0);
+  noStroke();
+  
+  //Pumpkin heads for orange
+  fill(248,109,7);
+  ellipse(phmx,phmty,400,160);
+  
+  //Pumpkin eyes
+  fill(255,255,0);
+  triangle(pletx,plrey,ple2x,plre23y,ple3x,plre23y);
+  triangle(prex,plrey,pre2x,plre23y,pre3x,plre23y);
+  
+  //Pumpkin Mouth
+  fill(255,255,0);
+  arc(phmx,phmty,240,140,0,PI);
+  
+  //Pumpkin Teeth
+  fill(248,109,7);
+  rect(pletx,phmty,40,40);
+  rect(prtx,phmty,40,40);  
+}
